@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 
 app = Flask(__name__)
 
@@ -34,7 +34,7 @@ def get_store(name):
 # GET /store - return a list of all the stores
 @app.route('/store',methods=['GET'])
 def get_stores():
-    pass
+    return jsonify({'stores':stores}) # This converts the list 'stores' into a dictionary 'stores', which can be returned as a json object
 
 # POST /store/<string:name>/item  (name:price) - create an item inside a specific store with a given name
 @app.route('/store/<string:name>',methods=['POST'])
