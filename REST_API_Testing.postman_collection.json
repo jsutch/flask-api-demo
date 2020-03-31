@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "954c5b7c-a263-4a7f-9b56-c3c0eebc0d02",
+		"name": "REST API Course",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Section 3",
+			"item": [
+				{
+					"name": "Get All Stores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/store",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"store"
+							]
+						},
+						"description": "Get Store"
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"newstore\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/store",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"store"
+							]
+						},
+						"description": "Get Store"
+					},
+					"response": []
+				},
+				{
+					"name": "My Wonderful Store",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						},
+						"description": "Get Store"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Store \"Bob\"",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Item To Store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\n\t\"name\":\"mynewitem2\",\n\t\"price\":5.66\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/store/newstore/item",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"store",
+								"newstore",
+								"item"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
